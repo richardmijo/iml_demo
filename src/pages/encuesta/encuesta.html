@@ -1,0 +1,53 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Encuesta</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list>
+		<ion-list-header>Preguntas</ion-list-header>
+
+		<ion-item>
+			<span item-left class="dot"></span>
+			<ion-label>Pregunta Uno</ion-label>
+			<ion-toggle color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item>
+			<span item-left class="dot"></span>
+			<ion-label>Pregunta Dos</ion-label>
+			<ion-toggle color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item>
+			<span item-left class="dot"></span>
+			<ion-label>Pregunta Tres</ion-label>
+			<ion-toggle color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item>
+			<span item-left class="dot"></span>
+			<ion-label>Seleccione la opcion</ion-label>
+			<ion-toggle color="secondary"></ion-toggle>
+		</ion-item>
+
+		<ion-item>
+			<span item-left class="dot"></span>
+			<ion-checkbox color="energized" checked="true" color="dark"></ion-checkbox>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Description</ion-label>
+			<ion-textarea></ion-textarea>
+		</ion-item>
+
+	</ion-list>
+
+	<button ion-button (click)="send()" type="submit" color="primary" block>Enviar</button>
+
+</ion-content>

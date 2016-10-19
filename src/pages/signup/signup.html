@@ -1,0 +1,42 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Regístrate</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="login-page">
+
+	<ion-list>
+		<div class="logo">
+			<img src="assets/img/appicon.svg">
+		</div>
+
+		<form #signupForm="ngForm" novalidate>
+			<ion-item>
+				<ion-label floating color="primary">Usuario</ion-label>
+				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				Usuario requerido
+			</p>
+
+			<ion-item>
+				<ion-label floating color="primary">Clave</ion-label>
+				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				Clave requerida
+			</p>
+
+			<div padding>
+				<button ion-button (click)="onSignup(signupForm)" type="submit" block color="primary">Crear</button>
+			</div>
+		</form>
+	</ion-list>
+
+</ion-content>

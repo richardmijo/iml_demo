@@ -1,0 +1,40 @@
+<ion-header no-shadow>
+	<ion-navbar>
+		<ion-buttons end *ngIf="showSkip">
+			<button ion-button (click)="startApp()" color="primary">Omitir</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+	<ion-slides [options]="{pager: true}" (ionWillChange)="onSlideChangeStart($event)">
+		<ion-slide *ngFor="let slide of slides">
+			<img [src]="slide.image" class="slide-image" />
+			<h2 class="slide-title" [innerHTML]="slide.title"></h2>
+			<p [innerHTML]="slide.description"></p>
+		</ion-slide>
+		<ion-slide>
+			<img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
+
+			<ion-row>
+				<ion-col>
+					<button primary clear small>
+            <!--div>http://isoft.com.ec/</div-->
+          </button>
+				</ion-col>
+			</ion-row>
+
+			<a class="item" href="#" onclick="window.open('http://isoft.com.ec/', '_system', 'location=yes'); return false;">
+          isoft.com.ec
+      </a>
+
+			<h2 class="slide-title">¿Listo para comenzar?</h2>
+
+
+			<button ion-button icon-right large clear (click)="startApp()">
+        Continuar
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+		</ion-slide>
+	</ion-slides>
+</ion-content>
